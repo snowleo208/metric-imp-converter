@@ -23,7 +23,11 @@ function ConvertHandler() {
 
   this.getUnit = function (input) {
     var result = input.replace(/([^A-Za-z])/g, '');
-    return result.toLowerCase();
+    if (!RegExp('^(kg|mi|gal|lbs|km|l)$', 'gm').test(result)) {
+      return 'invalid unit';
+    } else {
+      return result.toLowerCase();
+    }
   };
 
   this.getReturnUnit = function (initUnit) {
@@ -41,7 +45,7 @@ function ConvertHandler() {
     } else if (initUnit === 'km') {
       result = 'mi';
     } else {
-      result = '';
+      result = 'invalid unit';
     }
 
     return result.toLowerCase();
@@ -50,7 +54,7 @@ function ConvertHandler() {
   this.spellOutUnit = function (unit) {
     const list = {
       gal: 'gallons',
-      L: 'liters',
+      l: 'liters',
       kg: 'kilograms',
       lbs: 'pounds',
       mi: 'miles',

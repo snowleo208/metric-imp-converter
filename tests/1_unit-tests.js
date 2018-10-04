@@ -60,13 +60,15 @@ suite('Unit Tests', function () {
       var input = ['gal', 'l', 'mi', 'km', 'lbs', 'kg', 'GAL', 'L', 'MI', 'KM', 'LBS', 'KG'];
       input.forEach(function (ele) {
         //assert
+        assert.equal(convertHandler.getUnit(input), ele);
       });
       done();
     });
 
     test('Unknown Unit Input', function (done) {
-
-      //done();
+      var input = '909cm';
+      assert.equal(convertHandler.getUnit(input), 'invalid unit');
+      done();
     });
 
   });
@@ -87,7 +89,11 @@ suite('Unit Tests', function () {
   suite('Function convertHandler.spellOutUnit(unit)', function () {
 
     test('For Each Valid Unit Inputs', function (done) {
-      //see above example for hint
+      var input = ['gal', 'l', 'mi', 'km', 'lbs', 'kg'];
+      var expect = ['gallons', 'liters', 'miles', 'kilometres', 'pounds', 'kilograms'];
+      input.forEach(function (ele, i) {
+        assert.equal(convertHandler.getReturnUnit(ele), expect[i]);
+      });
       done();
     });
 
