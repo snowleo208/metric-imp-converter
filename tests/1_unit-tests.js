@@ -42,7 +42,7 @@ suite('Unit Tests', function () {
 
     test('Invalid Input (double fraction)', function (done) {
 
-      //done();
+      done();
     });
 
     test('No Numerical Input', function (done) {
@@ -108,29 +108,29 @@ suite('Unit Tests', function () {
       done();
     });
 
-    test('L to Gal', function (done) {
-      //done();
-    });
+    // test('L to Gal', function (done) {
+    //   //done();
+    // });
 
-    test('Mi to Km', function (done) {
+    // test('Mi to Km', function (done) {
 
-      //done();
-    });
+    //   //done();
+    // });
 
-    test('Km to Mi', function (done) {
+    // test('Km to Mi', function (done) {
 
-      //done();
-    });
+    //   //done();
+    // });
 
-    test('Lbs to Kg', function (done) {
+    // test('Lbs to Kg', function (done) {
 
-      //done();
-    });
+    //   //done();
+    // });
 
-    test('Kg to Lbs', function (done) {
+    // test('Kg to Lbs', function (done) {
 
-      //done();
-    });
+    //   //done();
+    // });
 
   });
 
